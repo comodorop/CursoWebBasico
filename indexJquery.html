@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <script src="js/jquery-1.12.4.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#txtResp").hide();
+                $("#btnEnvia").click(function () {
+                    var informacion = $("#txtInfo").val();
+                    $("#txtResp").val(informacion);
+//                    $("#txtResp").show('slow');
+                    $("#txtResp").slideDown();
+                    $("#txtInfo").slideUp();
+                });
+
+            });
+        </script>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            Captura de información
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" 
+                                   id="txtInfo"
+                                   class="form-control" placeholder="nombre"/>
+                            <br>
+                            <button id="btnEnvia" class="btn btn-primary">Enviar Informacion</button>
+                            <br> <br>
+                            <input type="text" 
+                                   id="txtResp" 
+                                   class="form-control" placeholder="Info"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
